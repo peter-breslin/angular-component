@@ -15,7 +15,7 @@ main {
 
   .navbar{
     grid-area: navbar;
-    background-color: gainsboro;
+    background-color: aliceblue;
   }
   .sidebar{
     grid-area: sidebar;
