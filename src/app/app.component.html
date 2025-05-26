@@ -1,46 +1,8 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<style>
-
-
-  main {
-    border: 0;
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-    "navbar navbar"
-    "sidebar content"
-    "sidebar content";
-    margin: 0;
-    min-height: 100vh;
-    padding: 0;
-    overflow: hidden; /* Hide scrollbars */ 
-  }
-
-  .navbar{
-    grid-area: navbar;
-  }
-  .sidebar{
-    grid-area: sidebar;
-  }
-  .content{
-    grid-area: content;
-  }
-</style>
 
 <main class="main">
 <div class="navbar">navbar</div>
 <div class="sidebar">sidebar</div>
 <div class="content"><router-outlet />content</div>
-
 </main>
 
 

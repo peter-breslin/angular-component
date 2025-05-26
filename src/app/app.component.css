@@ -1,0 +1,26 @@
+main {
+    border: 0;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "navbar navbar"
+    "sidebar content"
+    "sidebar content";
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    overflow: hidden; /* Hide scrollbars */ 
+  }
+
+  .navbar{
+    grid-area: navbar;
+    background-color: gainsboro;
+  }
+  .sidebar{
+    grid-area: sidebar;
+    background-color: aliceblue;
+  }
+  .content{
+    grid-area: content;
+  }
