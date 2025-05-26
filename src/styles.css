@@ -16,6 +16,21 @@ body {
     overflow:hidden;
 }
 
+/* */
+ul {
+    border:none;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  ul > li {
+    margin-top: 1.5rem;
+  }
+
+.container-navbar{
+    text-align: center; 
+}
+
 /* buttons */
 
 .btn-menu{
