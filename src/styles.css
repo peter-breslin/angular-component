@@ -27,12 +27,7 @@ ul {
     margin-top: 1.5rem;
   }
 
-.container-navbar{
-    text-align: center; 
-}
-
 /* buttons */
-
 .btn-menu{
     background-color: transparent;
     border:none;
