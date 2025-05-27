@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes} from '@angular/router';
 
 import { DashboardComponent } from './features/dashboard/dashboard/dashboard.component';
+import { MockOperationDataSourceService } from './features/dashboard/dashboard/services/mock-operation-data-source.service';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent }
@@ -13,6 +14,9 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
+  ],
+  providers :[
+    { provide: "operationDataSourceService", useClass: MockOperationDataSourceService}
   ]
 })
 export class DashboardModule { }
