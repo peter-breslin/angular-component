@@ -1,2 +1,7 @@
 <p>operation-list works!</p>
+
+<div *ngFor="let o of objectList">
+    <span>{{ o?.title }} | {{ o?.isin }}</span>
+</div>
+
 <app-operation-item></app-operation-item>

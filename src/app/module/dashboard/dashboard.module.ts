@@ -7,6 +7,7 @@ import { OperationItemComponent } from './features/operation-list/operation-item
 import { OperationListComponent } from './features/operation-list/operation-list.component';
 
 import { MockOperationDataSourceService } from './features/dashboard/dashboard/services/operation-data/mock-operation-data-source.service';
+import { OperationDataService } from './features/dashboard/dashboard/services/operation-data/operation-data.service';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent }
@@ -21,8 +22,9 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  providers :[
-    { provide: "operationDataSourceService", useClass: MockOperationDataSourceService}
+  providers :[ 
+     { provide : "operationDataSourceService", useClass: MockOperationDataSourceService}, 
+     OperationDataService
   ]
 })
 export class DashboardModule { }
