@@ -6,7 +6,7 @@ import { DashboardComponent } from './features/dashboard/dashboard/dashboard.com
 import { OperationItemComponent } from './features/operation-list/operation-item/operation-item.component';
 import { OperationListComponent } from './features/operation-list/operation-list.component';
 
-import { MockOperationDataSourceService } from './features/dashboard/dashboard/services/operation-data/mock-operation-data-source.service';
+import { MockOperationDataProviderService } from './features/dashboard/dashboard/services/operation-data/mock-operation-data-provider.service';
 import { OperationDataService } from './features/dashboard/dashboard/services/operation-data/operation-data.service';
 
 const routes: Routes = [
@@ -23,7 +23,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   providers :[ 
-     { provide : "operationDataSourceService", useClass: MockOperationDataSourceService}, 
+     { provide : "operationDataProviderService", useClass: MockOperationDataProviderService}, 
      OperationDataService
   ]
 })

@@ -1,5 +1,5 @@
 import { Inject, Injectable} from '@angular/core';
-import { IOperationDataSourceService } from './operation-data-source.service.interface';
+import { IOperationDataProviderService } from './operation-data-provider.service.interface';
 import { Observable } from 'rxjs';
 import { IOperation } from './operation-interface-model';
 
@@ -8,10 +8,10 @@ import { IOperation } from './operation-interface-model';
 @Injectable({providedIn: 'root'})
 export class OperationDataService {
     constructor(
-        @Inject("operationDataSourceService") private operationDataSourceService:IOperationDataSourceService,
+        @Inject("operationDataProviderService") private operationDataProviderService:IOperationDataProviderService,
     ) { }
 
      get() : Observable<IOperation[]>{
-        return this.operationDataSourceService.get();
+        return this.operationDataProviderService.get();
      }
 }
