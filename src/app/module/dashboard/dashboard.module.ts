@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes} from '@angular/router';
 
 import { DashboardComponent } from './features/dashboard/dashboard/dashboard.component';
+import { OperationItemComponent } from './features/operation-list/operation-item/operation-item.component';
 import { OperationListComponent } from './features/operation-list/operation-list.component';
 
 import { MockOperationDataSourceService } from './features/dashboard/dashboard/services/operation-data/mock-operation-data-source.service';
@@ -14,6 +15,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     DashboardComponent,
+    OperationItemComponent,
     OperationListComponent],
   imports: [
     CommonModule,
