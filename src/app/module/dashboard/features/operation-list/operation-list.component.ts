@@ -2,7 +2,7 @@ import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 
 import { IOperation } from '../dashboard/dashboard/services/operation-data/operation-interface-model';
 import {OperationDataService} from '../dashboard/dashboard/services/operation-data/operation-data.service';
-import { Subject, takeUntil } from 'rxjs';
+import { ReplaySubject, Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-operation-list',
@@ -13,15 +13,14 @@ import { Subject, takeUntil } from 'rxjs';
 export class OperationListComponent implements  OnInit, OnDestroy{
 
   objectList:IOperation[]=[];
-  ngUnsubscribe = new Subject<IOperation[]>();
-  
+  private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
 
   constructor(private operationDataService:OperationDataService){}
   
   ngOnInit(): void {
     
     this.operationDataService.get()
-    .pipe(takeUntil(this.ngUnsubscribe))
+    .pipe(takeUntil(this.destroyed$))
     .subscribe({ next: async (o) => {
 
       this.objectList = o;
@@ -35,7 +34,8 @@ export class OperationListComponent implements  OnInit, OnDestroy{
   }
 
   ngOnDestroy(): void {
-    this.ngUnsubscribe.complete();
+    this.destroyed$.next(true);
+    this.destroyed$.complete();
   }
 
   onComplete() : void {}
