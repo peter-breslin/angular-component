@@ -1,21 +1,17 @@
 
-<div>
-    <ng-container [ngTemplateOutlet]="headerTemplate || defaultTemplate"></ng-container>
-    <ng-container [ngTemplateOutlet]="contentTemplate || defaultContentTemplate" [ngTemplateOutletContext]="{ $implicit: operation}"></ng-container>
-    
-    <span>{{ operation?.isin }}</span>
-   
-    <ng-template #defaultTemplate>
-        <span>{{ operation?.status }}</span>
-        <span>{{ operation?.price }}</span>
-        <span>{{ operation?.coupon }}</span>
-    </ng-template>
-    <ng-template #defaultContentTemplate>
-        <span>{{ operation?.type }}</span>
-        <span>{{ operation?.title}}</span>
-        <span>{{ operation?.maturityDate }}</span>
-    </ng-template>
+<div class="container-operation-item">
+    <div class="operation-item-header"><ng-container [ngTemplateOutlet]="headerTemplate || defaultHeaderTemplate" /></div>
+    <div class="operation-item-footer"><ng-container [ngTemplateOutlet]="contentTemplate || defaultContentTemplate" [ngTemplateOutletContext]="{ $implicit: operation}" /></div>
 </div>
 
+<ng-template #defaultHeaderTemplate>
+    <div>{{ operation?.title }}</div>
+    <div>{{ operation?.isin }}</div>
+    <div>{{ operation?.type }}</div>
+</ng-template>
 
-
+<ng-template #defaultContentTemplate>
+    <!-- <span>{{ operation?.type }}</span>
+    <span>{{ operation?.title}}</span>
+    <span>{{ operation?.maturityDate }}</span> -->
+</ng-template>

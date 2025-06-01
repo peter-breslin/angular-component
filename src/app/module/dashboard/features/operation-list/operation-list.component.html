@@ -1,6 +1,5 @@
-<p>operation-list works!</p>
 
-<ng-template #parentHeader>
+<!-- <ng-template #parentHeader>
     <span class="parent-header">Hi, this is a parent!</span>
 </ng-template>
 
@@ -8,10 +7,14 @@
     <span>Alternative content...</span>
     <span class="content-header">{{ operation?.title }}</span>
     <span class="content-header">{{ operation?.isin }}</span>
-</ng-template>
+</ng-template> -->
 
 
 <div *ngFor="let o of dataSource">
+    <app-operation-item [operation]="o"></app-operation-item>
+</div>
+
+<!-- <div *ngFor="let o of dataSource">
     
     <app-operation-item 
         [operation]="o" 
@@ -20,7 +23,6 @@
     
     </app-operation-item>
 
-
-</div>
+</div> -->
 
 

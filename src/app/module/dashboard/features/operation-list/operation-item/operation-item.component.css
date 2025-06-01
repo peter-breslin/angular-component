@@ -1,0 +1,23 @@
+.container-operation-item{
+    border:1.0rem transparent;
+    background-color: green;
+    color:white;
+    display: grid;
+    grid-template-columns: 1ft;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "operation-item-header"
+    "operation-item-footer";
+    margin:0.5rem;
+    max-width:25%;
+    overflow: hidden; /* Hide scrollbars */ 
+    padding:1.0rem;
+}
+
+.operation-item-header{
+    grid-area: operation-item;
+}
+
+.operation-item-footer{
+    grid-area: operation-item-footer;
+}
