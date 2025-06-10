@@ -10,10 +10,9 @@
 </ng-template> -->
 
 
-<div *ngFor="let o of dataSource">
-    <app-operation-item [operation]="o"></app-operation-item>
+<div class="container-operation-items">
+    <app-operation-item *ngFor="let o of dataSource" [operation]="o"></app-operation-item>
 </div>
-
 <!-- <div *ngFor="let o of dataSource">
     
     <app-operation-item 

@@ -3,5 +3,20 @@
 }
 
 .content-header {
+    
     background-color: lightgreen;
 }
+
+
+.container-operation-items {
+    background-color:transparent;
+    display: flex;
+    cursor: pointer;
+    overflow-x: auto;
+    overflow-y: auto;
+    text-align: center;
+    white-space: nowrap; 
+    width:100vw;
+  } 
+
+

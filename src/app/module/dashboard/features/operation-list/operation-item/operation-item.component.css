@@ -9,9 +9,11 @@
     "operation-item-header"
     "operation-item-footer";
     margin:0.5rem;
-    max-width:25%;
     overflow: hidden; /* Hide scrollbars */ 
     padding:1.0rem;
+    text-align: left;
+    float: left;
+    min-width:250px;
 }
 
 .operation-item-header{
