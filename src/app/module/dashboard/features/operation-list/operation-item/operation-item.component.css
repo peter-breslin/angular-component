@@ -1,6 +1,6 @@
 .container-operation-item{
     border:1.0rem transparent;
-    background-color: green;
+
     color:white;
     display: grid;
     grid-template-columns: 1ft;
@@ -22,4 +22,12 @@
 
 .operation-item-footer{
     grid-area: operation-item-footer;
+}
+
+.color-alert{
+    background-color: green;
+}
+
+.color-default{
+    background-color: lightgray;
 }

@@ -1,5 +1,5 @@
 
-<div class="container-operation-item">
+<div class="container-operation-item" [ngClass]="operation?.status == 1 ? 'color-alert' : 'color-default'">
     <div class="operation-item-header"><ng-container [ngTemplateOutlet]="headerTemplate || defaultHeaderTemplate" /></div>
     <div class="operation-item-footer"><ng-container [ngTemplateOutlet]="contentTemplate || defaultContentTemplate" [ngTemplateOutletContext]="{ $implicit: operation}" /></div>
 </div>
