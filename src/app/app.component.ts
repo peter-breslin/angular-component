@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,5 @@ import { NavBarComponent } from "./nav-bar/nav-bar.component";
 })
 export class AppComponent {
   title = 'angular-component';
+  apiUrl = environment.apiUrl;
 }
