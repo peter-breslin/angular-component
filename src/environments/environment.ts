@@ -4,9 +4,10 @@ export const environment = {
 
 
 /*
- 
-ng serve --configuration=production
+ng build --configuration=development
 
-ng build --configuration=production
+ng serve --configuration=development
+
+ng serve -- defaults to environment.ts 
 
 */
