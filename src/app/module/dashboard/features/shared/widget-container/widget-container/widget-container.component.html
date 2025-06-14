@@ -1,1 +1,12 @@
-<p>widget-container works!</p>
+
+<div class="widget-container">
+    <div class="header"><ng-container [ngTemplateOutlet]="defaultHeaderTemplate" /></div>
+    <div class="content"><ng-container [ngTemplateOutlet]="contentTemplate || defaultContentTemplate" /></div>
+</div>
+
+
+<ng-template #defaultHeaderTemplate>{{ title }}</ng-template>
+
+<ng-template #defaultContentTemplate>
+<div>No Content</div>
+</ng-template>

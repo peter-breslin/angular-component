@@ -6,6 +6,7 @@ import { DashboardComponent } from './features/dashboard/dashboard/dashboard.com
 import { OperationItemComponent } from './features/operation-list/operation-item/operation-item.component';
 import { OperationListComponent } from './features/operation-list/operation-list.component';
 import { OperationDetailComponent } from './features/operation-detail/operation-detail/operation-detail.component';
+import { WidgetContainerComponent } from './features/shared/widget-container/widget-container/widget-container.component';
 
 import { MockOperationDataProviderService } from './features/dashboard/dashboard/services/operation-data/mock-operation-data-provider.service';
 import { OperationDataService } from './features/dashboard/dashboard/services/operation-data/operation-data.service';
@@ -26,7 +27,9 @@ const routes: Routes = [{
     DashboardComponent,
     OperationItemComponent,
     OperationListComponent, 
-    OperationDetailComponent],
+    OperationDetailComponent,
+    WidgetContainerComponent],
+    
     
   imports: [
     CommonModule,

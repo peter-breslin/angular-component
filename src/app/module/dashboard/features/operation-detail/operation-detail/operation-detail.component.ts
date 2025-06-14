@@ -9,12 +9,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class OperationDetailComponent {
 
-  //id = signal('');
   id:string = "";
 
   constructor(private activatedRoute:ActivatedRoute){
     this.activatedRoute.params.subscribe((params) => {
-      //this.id.set(params['id']);
       this.id = params['id'];
     });
   }

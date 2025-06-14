@@ -1,0 +1,17 @@
+.widget-container{
+    border:0.0rem solid 2px;
+    background-color: aqua;
+    color:black;
+    display: grid;
+    grid-template-columns: 1ft;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "header"
+    "content";
+    margin:2.0rem;
+    overflow: hidden; /* Hide scrollbars */ 
+    padding:0.0rem;
+}
+
+.header { grid-area: header; }
+.content { grid-area: content; }
