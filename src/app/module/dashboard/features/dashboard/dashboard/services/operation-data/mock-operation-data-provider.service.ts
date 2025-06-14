@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import { IOperation } from './operation-interface-model';
+import { IOperation } from './operation-model-interface';
 import * as DS from './mock-operation-data';
 import { IOperationDataProviderService} from'./operation-data-provider.service.interface';
 

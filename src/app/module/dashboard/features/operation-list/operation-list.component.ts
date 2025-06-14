@@ -1,6 +1,6 @@
 import { Component, Inject, OnDestroy, OnInit, inject } from '@angular/core';
 
-import { IOperation } from '../dashboard/dashboard/services/operation-data/operation-interface-model';
+import { IOperation } from '../dashboard/dashboard/services/operation-data/operation-model-interface';
 import {OperationDataService} from '../dashboard/dashboard/services/operation-data/operation-data.service';
 import { ReplaySubject, Subject, takeUntil } from 'rxjs';
 
@@ -12,7 +12,7 @@ import { ReplaySubject, Subject, takeUntil } from 'rxjs';
 })
 export class OperationListComponent implements  OnInit, OnDestroy{
 
-  dataSource:IOperation[]=[];
+  data:IOperation[]=[];
   destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
   operationDataService = inject(OperationDataService)
 
@@ -29,11 +29,11 @@ export class OperationListComponent implements  OnInit, OnDestroy{
 
   onError() : void {}
 
-  private setDataSource() : void {
+  setDataSource() : void {
     this.operationDataService.get()
     .pipe(takeUntil(this.destroyed$))
     .subscribe({ next: async (o) => {
-      this.dataSource = o;
+      this.data = o;
     },
     error: (err) => {
       this.onError()

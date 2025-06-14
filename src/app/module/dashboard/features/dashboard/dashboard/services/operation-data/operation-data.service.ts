@@ -1,7 +1,7 @@
 import { Inject, Injectable} from '@angular/core';
 import { IOperationDataProviderService } from './operation-data-provider.service.interface';
 import { Observable } from 'rxjs';
-import { IOperation } from './operation-interface-model';
+import { IOperation } from './operation-model-interface';
 
 
 

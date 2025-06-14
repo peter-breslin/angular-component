@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, Input, TemplateRef } from '@angular/core';
 
-import { IOperation } from '../../dashboard/dashboard/services/operation-data/operation-interface-model';
+import { IOperation } from '../../dashboard/dashboard/services/operation-data/operation-model-interface';
 import { Router } from '@angular/router';
 
 @Component({

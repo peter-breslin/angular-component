@@ -8,8 +8,10 @@ import { OperationListComponent } from './features/operation-list/operation-list
 import { OperationDetailComponent } from './features/operation-detail/operation-detail/operation-detail.component';
 import { WidgetContainerComponent } from './features/shared/widget-container/widget-container/widget-container.component';
 
+import { MockStatisticDataProviderService } from './features/dashboard/dashboard/services/statistics-data/mock-statistic-data-provider.service';
 import { MockOperationDataProviderService } from './features/dashboard/dashboard/services/operation-data/mock-operation-data-provider.service';
 import { OperationDataService } from './features/dashboard/dashboard/services/operation-data/operation-data.service';
+import { StatisticDataService} from './features/dashboard/dashboard/services/statistics-data/statistic-data.service';
 
 
 
@@ -37,7 +39,9 @@ const routes: Routes = [{
   ],
   providers :[ 
      { provide : "operationDataProviderService", useClass: MockOperationDataProviderService}, 
-     OperationDataService
+     { provide : "statisticDataProviderService", useClass: MockStatisticDataProviderService},
+     OperationDataService,
+     StatisticDataService
   ]
 })
 export class DashboardModule { }

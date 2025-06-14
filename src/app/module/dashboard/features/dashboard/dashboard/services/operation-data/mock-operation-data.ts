@@ -1,4 +1,4 @@
-import {IOperation} from './operation-interface-model';
+import {IOperation} from './operation-model-interface';
 
 export const MockOperationData:Array<IOperation> = [{
     "isin" : "GB00BL68HJ26",
