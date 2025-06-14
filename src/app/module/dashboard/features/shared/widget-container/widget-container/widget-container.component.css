@@ -13,5 +13,5 @@
     padding:0.0rem;
 }
 
-.header { grid-area: header; }
+.header { grid-area: header; font-size: xx-large; }
 .content { grid-area: content; }

@@ -1,5 +1,9 @@
-<p>operation-detail works!</p>
 
 {{ this?.id }}
 
-<app-widget-container [title]="'Stats'" />
+<app-widget-container [title]="'Statistics'" [contentTemplate]="content" />
+
+
+<ng-template #content>
+    <div>Hello World!....!!</div>
+</ng-template>
