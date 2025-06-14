@@ -1,5 +1,5 @@
 .widget-container{
-    border:0.0rem solid 2px;
+    border:0.0rem;
     background-color: aqua;
     color:black;
     display: grid;
@@ -8,9 +8,11 @@
     grid-template-areas:
     "header"
     "content";
-    margin:2.0rem;
+    margin:auto; /* make child div stay within the bounds of parent div */
     overflow: hidden; /* Hide scrollbars */ 
-    padding:0.0rem;
+    padding:1.0rem;
+    width: 100%;
+
 }
 
 .header { grid-area: header; font-size: xx-large; }
