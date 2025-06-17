@@ -1,0 +1,24 @@
+#container {
+    border: solid 0px black;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(1, 5fr 1fr);
+    grid-gap: 0px;
+    padding: 0px;
+    row-gap: 1.0rem;
+  }
+
+  #container div {
+    background-color: azure;
+    font-family:Arial;
+    font-size:x-large;
+  }
+
+  #container div:nth-child(odd) {
+    background-color: yellow;
+
+  }
+
+  #container div:nth-child(even) {
+    background-color: gainsboro;
+  }

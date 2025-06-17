@@ -1,8 +1,11 @@
 
 <app-widget-container [title]="id" [contentTemplate]="content" />
 
-<ng-template #content>
-    <div *ngFor="let o of data">
-        {{ o?.name}} /  {{ o?.value}}
+<ng-template #content >
+    <div id="container">
+        <ng-container *ngFor="let o of data">
+            <div>{{ o?.name}}</div> 
+            <div>{{ o?.value}}</div> 
+        </ng-container>
     </div>
 </ng-template>
